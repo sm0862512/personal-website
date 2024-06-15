@@ -6,7 +6,8 @@ const Home = () => {
         <Container>
             
             <h1>Welcome to the Home Page</h1>
-            <p>This is my about page</p>
+            <p>This is my Home Page</p>
+            <p> Current Project React Website</p>
         </Container>
     );
 };
