@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li a {
+  text-decoration: none;
+  cursor: default;
+  color: black;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.navbar {
+  border-bottom: 2px solid #000; /* Change the color and thickness as needed */
+}
+
+.loginfourm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.loginpage{
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+   /*align-items: center;*/
+
+}
+.container-shift-up {
+  margin-top: -60px; /* Adjust this value as needed */
+}
+.background{
+    color: #e79f80; /* Replace with your desired color */
+    font-weight: bold;
+    border-radius: 10px;
+}
