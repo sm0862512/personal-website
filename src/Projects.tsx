@@ -28,7 +28,7 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Magic Card Scanner</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank">Magic Card Scanner</a> </Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noreferrer">Magic Card Scanner</a> </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow1(false)}>
                             Close
@@ -39,7 +39,7 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>React Website (This website)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank">React Website</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noreferrer">React Website</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow2(false)}>
                             Close
@@ -50,7 +50,7 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Nasa App(Swift)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank">Nasa Swift App</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noreferrer">Nasa Swift App</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow3(false)}>
                             Close
@@ -61,7 +61,7 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Minecraft Plugin (Java)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank">Java Minecraft plugin</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noreferrer">Java Minecraft plugin</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow4(false)}>
                             Close
