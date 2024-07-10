@@ -28,47 +28,47 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Magic Card Scanner</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noopener noreferrer">Magic Card Scanner</a> </Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noreferrer">Magic Card Scanner</a> </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow1(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <Modal show={show2} onHide={() => setShow2(false)}>
+                <Modal show={show2} onHide={() => setShow1(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>React Website (This website)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noopener noreferrer">React Website</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noreferrer">React Website</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow2(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <Modal show={show3} onHide={() => setShow3(false)}>
+                <Modal show={show3} onHide={() => setShow1(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>Nasa App(Swift)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noopener noreferrer">Nasa Swift App</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noreferrer">Nasa Swift App</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow3(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <Modal show={show4} onHide={() => setShow4(false)}>
+                <Modal show={show4} onHide={() => setShow1(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>Minecraft Plugin (Java)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/minecraft-plugin" target="_blank" rel="noopener noreferrer">Java Minecraft plugin</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noreferrer">Java Minecraft plugin</a></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow4(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <Modal show={show5} onHide={() => setShow5(false)}>
+                <Modal show={show5} onHide={() => setShow1(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>MTG Book Backend (django)</Modal.Title>
                     </Modal.Header>
@@ -79,7 +79,7 @@ const Projects = () => {
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                <Modal show={show6} onHide={() => setShow6(false)}>
+                <Modal show={show6} onHide={() => setShow1(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>MTG Book Frontend (React)</Modal.Title>
                     </Modal.Header>
