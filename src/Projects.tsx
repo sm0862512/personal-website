@@ -72,7 +72,6 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>MTG Book Backend (django)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="#" onClick={(e) => e.preventDefault()}>No open source link Available</a></Modal.Body>
                     <Modal.Body>
                         <button className="link-button" onClick={() => setShow5(false)}>No open source link Available</button>
                     </Modal.Body>
@@ -81,9 +80,8 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>MTG Book Frontend (React)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="#" onClick={(e) => e.preventDefault()}>No open source link Available</a></Modal.Body>
                     <Modal.Body>
-                        <button className="link-button" onClick={() => setShow5(false)}>No open source link Available</button>
+                        <button className="link-button" onClick={() => setShow6(false)}>No open source link Available</button>
                     </Modal.Body>
                 </Modal>
             </Container>
