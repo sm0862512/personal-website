@@ -29,7 +29,7 @@ const Projects = () => {
                         <Modal.Title>Magic Card Scanner</Modal.Title>
                     </Modal.Header>
                     <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noopener noreferrer">Magic Card Scanner</a>
-                    <p>This project goal was to learn and practice learning OpenCV. The project uses OpenCV to scan magic cards and return the card name and set. The end goal is to have a working Magic card sorting Machine that People can build and sort or inventory. The program also has online Ticket support for shops that my friends and I run to support shops. </p>
+                    <p>The project uses OpenCV to scan magic cards and return the card name and set. The end goal is to have a working Magic card sorting Machine that People can build and sort or inventory. The program also has online Ticket support for shops that my friends and I run to support shops. </p>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow1(false)}>
@@ -86,6 +86,11 @@ const Projects = () => {
                     <Modal.Body>
                         <button className="link-button" onClick={() => setShow5(false)}>No open source link Available</button>
                     </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShow5(false)}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
                 </Modal>
                 <Modal show={show6} onHide={() => setShow6(false)}>
                     <Modal.Header closeButton>
@@ -94,6 +99,11 @@ const Projects = () => {
                     <Modal.Body>
                         <button className="link-button" onClick={() => setShow6(false)}>No open source link Available</button>
                     </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShow6(false)}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
                 </Modal>
             </Container>
         </Container>
