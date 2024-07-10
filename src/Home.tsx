@@ -7,7 +7,7 @@ const Home = () => {
             
             <h1>Welcome to the Home Page</h1>
             <p>This is my Home Page</p>
-            <p> Current Project React Website</p>
+            <p> Current Project React Websitetest</p>
         </Container>
     );
 };
