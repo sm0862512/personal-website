@@ -28,7 +28,9 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Magic Card Scanner</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noopener noreferrer">Magic Card Scanner</a> </Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noopener noreferrer">Magic Card Scanner</a>
+                    <p>This project goal was to learn and practice learning OpenCV. The project uses OpenCV to scan magic cards and return the card name and set. The end goal is to have a working Magic card sorting Machine that People can build and sort or inventory. The program also has online Ticket support for shops that my friends and I run to support shops. </p>
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow1(false)}>
                             Close
@@ -39,7 +41,9 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>React Website (This website)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noopener noreferrer">React Website</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noopener noreferrer">React Website</a>
+                        <p>This project goal was to learn and practice learning React. The website is hosted on netlify. </p>
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow2(false)}>
                             Close
@@ -50,7 +54,9 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Nasa App(Swift)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noopener noreferrer">Nasa Swift App</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noopener noreferrer">Nasa Swift App</a>
+                    <p> This project was for a final for My App class. In this class we learned how to make a Android app and Swift app. This was the final project for the class.</p>
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow3(false)}>
                             Close
@@ -61,7 +67,9 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         <Modal.Title>Minecraft Plugin (Java)</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/minecraft-plugin" target="_blank" rel="noopener noreferrer">Java Minecraft plugin</a></Modal.Body>
+                    <Modal.Body><a href="https://github.com/sm0862512/minecraft-plugin" target="_blank" rel="noopener noreferrer">Java Minecraft plugin</a>
+                    <p> This project was for a final in my java 2 class. In this project I made a Minecraft server plugin that keeps track of the players home they set. The player can teleport to them as well. </p>
+                    </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow4(false)}>
                             Close
@@ -70,7 +78,10 @@ const Projects = () => {
                 </Modal>
                 <Modal show={show5} onHide={() => setShow5(false)}>
                     <Modal.Header closeButton>
-                        <Modal.Title>MTG Book Backend (django)</Modal.Title>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                        <Modal.Title><a>MTG Book Backend (django)</a>
+                        <p> </p>
+                        </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <button className="link-button" onClick={() => setShow5(false)}>No open source link Available</button>
