@@ -80,7 +80,6 @@ const Projects = () => {
                     <Modal.Header closeButton>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <Modal.Title><a>MTG Book Backend (django)</a>
-                        <p> </p>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
