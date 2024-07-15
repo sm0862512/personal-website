@@ -16,6 +16,7 @@ const NavBar = () => {
                         <Nav.Link href="/About">About</Nav.Link>
                         <Nav.Link href="https://www.linkedin.com/in/shane-mrad/">LinkedIn</Nav.Link>
                         <Nav.Link href="/Degrees">Degrees</Nav.Link>
+                        <Nav.Link href="/Certs">Certs</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
