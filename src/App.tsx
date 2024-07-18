@@ -8,6 +8,7 @@ import About from "./About";
 import NavBar from "./NavBar";
 import Projects from "./Projects";
 import Degrees from "./Degrees";
+import Certs from "./Certs";
 
 const App: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                 <Route path="/About" element={<About />} />
                 <Route path="/Projects" element={<Projects />} />
                 <Route path="/Degrees" element={<Degrees />} />
+                <Route path="Certs" element={<Certs />} />
             </Routes>
         </Router>
     );
