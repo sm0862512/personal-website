@@ -1,0 +1,58 @@
+.home-hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.min-vh-80 {
+    min-height: 80vh;
+}
+
+.skills-preview {
+    padding: 30px 0;
+}
+
+.skills-preview .badge {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.stat-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stat-box h4 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+
+.stat-box p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        padding: 40px 0;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .display-6 {
+        font-size: 1.5rem;
+    }
+}

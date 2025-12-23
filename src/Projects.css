@@ -1,0 +1,41 @@
+.projects-page {
+    max-width: 1200px;
+}
+
+.project-card {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-stack {
+    min-height: 60px;
+}
+
+.tech-stack .badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        padding: 30px 15px;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+}

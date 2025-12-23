@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Modal, Button } from 'react-bootstrap';
-import './About.css';
+import { Container, Modal, Button, Row, Col, Card, Badge } from 'react-bootstrap';
+import './Projects.css';
 
 const Projects = () => {
     const [show1, setShow1] = useState(false);
@@ -9,102 +9,443 @@ const Projects = () => {
     const [show4, setShow4] = useState(false);
     const [show5, setShow5] = useState(false);
     const [show6, setShow6] = useState(false);
+    const [show7, setShow7] = useState(false);
+    const [show8, setShow8] = useState(false);
+
+    const projects = [
+        {
+            id: 1,
+            title: "Magic Card Scanner",
+            tech: ["Python", "OpenCV", "Computer Vision"],
+            type: "Personal Project",
+            status: "Active Development",
+            show: show1,
+            setShow: setShow1
+        },
+        {
+            id: 2,
+            title: "Personal Portfolio Website",
+            tech: ["React", "TypeScript", "Bootstrap"],
+            type: "Personal Project",
+            status: "Deployed",
+            show: show2,
+            setShow: setShow2
+        },
+        {
+            id: 3,
+            title: "NASA Swift App",
+            tech: ["Swift", "iOS", "API Integration"],
+            type: "Academic Project",
+            status: "Completed",
+            show: show3,
+            setShow: setShow3
+        },
+        {
+            id: 4,
+            title: "Minecraft Home Plugin",
+            tech: ["Java", "Bukkit API"],
+            type: "Academic Project",
+            status: "Completed",
+            show: show4,
+            setShow: setShow4
+        },
+        {
+            id: 5,
+            title: "MTG Book Backend",
+            tech: ["Django", "Python", "REST API"],
+            type: "Personal Project",
+            status: "Private",
+            show: show5,
+            setShow: setShow5
+        },
+        {
+            id: 6,
+            title: "MTG Book Frontend",
+            tech: ["React", "JavaScript"],
+            type: "Personal Project",
+            status: "Private",
+            show: show6,
+            setShow: setShow6
+        },
+        {
+            id: 7,
+            title: "Twitch Event Plugin",
+            tech: ["Java", "Minecraft API"],
+            type: "Contract Work",
+            status: "Delivered",
+            show: show7,
+            setShow: setShow7
+        },
+        {
+            id: 8,
+            title: "Viewer Forge",
+            tech: ["Python", "Django", "Twitch API", "SQLite"],
+            type: "Ongoing Project",
+            status: "In Development",
+            show: show8,
+            setShow: setShow8
+        }
+    ];
 
     return (
-        <Container>
-            <Container>
-                <h1>Projects</h1>
-                <p>Here are some of my projects:</p>
-                <ul>
-                    <li onClick={() => setShow1(true)} style={{cursor: 'pointer'}}>Magic Card Scanner (Python)</li>
-                    <li onClick={() => setShow2(true)} style={{cursor: 'pointer'}}>React Website (This website)</li>
-                    <li onClick={() => setShow3(true)} style={{cursor: 'pointer'}}>Nasa App(Swift)</li>
-                    <li onClick={() => setShow4(true)} style={{cursor: 'pointer'}}>Minecraft Plugin (Java)</li>
-                    <li onClick={() => setShow5(true)} style={{cursor: 'pointer'}}>MTG Book Backend (django)</li>
-                    <li onClick={() => setShow6(true)} style={{cursor: 'pointer'}}>MTG Book Frontend (React)</li>
-                </ul>
+        <Container className="projects-page py-5">
+            <Row className="mb-5">
+                <Col lg={12}>
+                    <h1 className="display-4 fw-bold mb-3">Projects Portfolio</h1>
+                    <p className="lead text-muted">
+                        A collection of personal, academic, and contract projects showcasing full-stack development,
+                        computer vision, and API integration skills.
+                    </p>
+                </Col>
+            </Row>
 
-                <Modal show={show1} onHide={() => setShow1(false)}>
+            <Row>
+                {projects.map((project, index) => (
+                    <Col md={6} lg={4} key={project.id} className="mb-4">
+                        <Card
+                            className="project-card h-100"
+                            onClick={() => project.setShow(true)}
+                        >
+                            <Card.Body>
+                                <div className="d-flex justify-content-between align-items-start mb-3">
+                                    <h3 className="h5 fw-bold mb-0">{project.title}</h3>
+                                </div>
+                                <div className="mb-3">
+                                    <Badge bg="secondary" className="me-2 mb-2">{project.type}</Badge>
+                                    <Badge
+                                        bg={project.status === "Deployed" || project.status === "Delivered" ? "success" :
+                                            project.status === "In Development" || project.status === "Active Development" ? "primary" : "info"}
+                                        className="mb-2"
+                                    >
+                                        {project.status}
+                                    </Badge>
+                                </div>
+                                <div className="tech-stack mb-3">
+                                    {project.tech.map((tech, idx) => (
+                                        <Badge key={idx} bg="light" text="dark" className="me-1 mb-1">{tech}</Badge>
+                                    ))}
+                                </div>
+                                <div className="text-primary fw-bold mt-auto">
+                                    Click for details →
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+
+            <Modal show={show1} onHide={() => setShow1(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title>Magic Card Scanner</Modal.Title>
+                        <Modal.Title className="fw-bold">Magic Card Scanner</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/card-scanner" target="_blank" rel="noopener noreferrer">Magic Card Scanner</a>
-                    <p>The project uses OpenCV to scan magic cards and return the card name and set. The end goal is to have a working Magic card sorting Machine that People can build and sort or inventory. The program also has online Ticket support for shops that my friends and I run to support shops. </p>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">Python</Badge>
+                            <Badge bg="primary" className="me-2">OpenCV</Badge>
+                            <Badge bg="primary">Computer Vision</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Advanced computer vision application using OpenCV to automatically scan and identify
+                            Magic: The Gathering cards. The system recognizes card names and sets with high accuracy,
+                            designed to be the foundation for a complete card sorting machine.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Automated card recognition using computer vision algorithms</li>
+                            <li>Set identification and cataloging capabilities</li>
+                            <li>Inventory management system for card shops</li>
+                            <li>Online ticket support system for shop integration</li>
+                            <li>Scalable architecture for future automation</li>
+                        </ul>
+                        <div className="mt-3">
+                            <a
+                                href="https://github.com/sm0862512/card-scanner"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary"
+                            >
+                                View on GitHub
+                            </a>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow1(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-                <Modal show={show2} onHide={() => setShow2(false)}>
+            </Modal>
+            <Modal show={show2} onHide={() => setShow2(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title>React Website (This website)</Modal.Title>
+                        <Modal.Title className="fw-bold">Personal Portfolio Website</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/personal-website" target="_blank" rel="noopener noreferrer">React Website</a>
-                        <p>This project goal was to learn and practice learning React. The website is hosted on netlify. </p>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">React</Badge>
+                            <Badge bg="primary" className="me-2">TypeScript</Badge>
+                            <Badge bg="primary">Bootstrap</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Professional portfolio website built with React and TypeScript, showcasing projects,
+                            skills, and experience. Demonstrates proficiency in modern frontend development and
+                            responsive design principles.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Responsive design with React Bootstrap</li>
+                            <li>TypeScript for type safety</li>
+                            <li>Client-side routing with React Router</li>
+                            <li>Deployed on Netlify with CI/CD</li>
+                            <li>Modern UI/UX design patterns</li>
+                        </ul>
+                        <div className="mt-3">
+                            <a
+                                href="https://github.com/sm0862512/personal-website"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary"
+                            >
+                                View on GitHub
+                            </a>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow2(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-                <Modal show={show3} onHide={() => setShow3(false)}>
+            </Modal>
+            <Modal show={show3} onHide={() => setShow3(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title>Nasa App(Swift)</Modal.Title>
+                        <Modal.Title className="fw-bold">NASA Swift App</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/final" target="_blank" rel="noopener noreferrer">Nasa Swift App</a>
-                    <p> This project was for a final for My App class. In this class we learned how to make a Android app and Swift app. This was the final project for the class.</p>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">Swift</Badge>
+                            <Badge bg="primary" className="me-2">iOS</Badge>
+                            <Badge bg="primary">API Integration</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Mobile application developed for iOS using Swift, integrating with NASA's public APIs
+                            to display astronomical data and imagery. Academic project demonstrating mobile
+                            development skills and API integration.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Native iOS application built with Swift</li>
+                            <li>NASA API integration for real-time data</li>
+                            <li>Clean user interface design</li>
+                            <li>Asynchronous data loading</li>
+                            <li>Image caching and display</li>
+                        </ul>
+                        <div className="mt-3">
+                            <a
+                                href="https://github.com/sm0862512/final"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary"
+                            >
+                                View on GitHub
+                            </a>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow3(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-                <Modal show={show4} onHide={() => setShow4(false)}>
+            </Modal>
+            <Modal show={show4} onHide={() => setShow4(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title>Minecraft Plugin (Java)</Modal.Title>
+                        <Modal.Title className="fw-bold">Minecraft Home Plugin</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body><a href="https://github.com/sm0862512/minecraft-plugin" target="_blank" rel="noopener noreferrer">Java Minecraft plugin</a>
-                    <p> This project was for a final in my java 2 class. In this project I made a Minecraft server plugin that keeps track of the players home they set. The player can teleport to them as well. </p>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">Java</Badge>
+                            <Badge bg="primary">Bukkit API</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Server-side plugin for Minecraft built with Java and the Bukkit API. Implements a
+                            home system allowing players to set multiple home locations and teleport to them,
+                            with persistent data storage.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Multiple home location management per player</li>
+                            <li>Teleportation command system</li>
+                            <li>Persistent data storage</li>
+                            <li>Player permission handling</li>
+                            <li>Command parsing and validation</li>
+                        </ul>
+                        <div className="mt-3">
+                            <a
+                                href="https://github.com/sm0862512/minecraft-plugin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary"
+                            >
+                                View on GitHub
+                            </a>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow4(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-                <Modal show={show5} onHide={() => setShow5(false)}>
+            </Modal>
+            <Modal show={show5} onHide={() => setShow5(false)} size="lg">
                     <Modal.Header closeButton>
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <Modal.Title><a>MTG Book Backend (django)</a>
-                        </Modal.Title>
+                        <Modal.Title className="fw-bold">MTG Book Backend</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <button className="link-button" onClick={() => setShow5(false)}>No open source link Available</button>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">Django</Badge>
+                            <Badge bg="primary" className="me-2">Python</Badge>
+                            <Badge bg="primary">REST API</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Backend API service for managing Magic: The Gathering card collections. Built with
+                            Django REST Framework, providing robust data management and API endpoints for the
+                            companion frontend application.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>RESTful API architecture</li>
+                            <li>Database models for card collection management</li>
+                            <li>Authentication and authorization</li>
+                            <li>CRUD operations for collections</li>
+                            <li>API documentation and versioning</li>
+                        </ul>
+                        <div className="alert alert-info mt-3">
+                            <strong>Note:</strong> This is a private repository. Source code not available publicly.
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow5(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-                <Modal show={show6} onHide={() => setShow6(false)}>
+            </Modal>
+            <Modal show={show6} onHide={() => setShow6(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title>MTG Book Frontend (React)</Modal.Title>
+                        <Modal.Title className="fw-bold">MTG Book Frontend</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <button className="link-button" onClick={() => setShow6(false)}>No open source link Available</button>
+                        <div className="mb-3">
+                            <Badge bg="primary" className="me-2">React</Badge>
+                            <Badge bg="primary">JavaScript</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Frontend application for MTG card collection management. Built with React to provide
+                            an intuitive interface for browsing, organizing, and managing Magic: The Gathering
+                            card collections with real-time updates.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Interactive React-based user interface</li>
+                            <li>Integration with Django backend API</li>
+                            <li>Card search and filtering</li>
+                            <li>Collection organization tools</li>
+                            <li>Responsive design for mobile and desktop</li>
+                        </ul>
+                        <div className="alert alert-info mt-3">
+                            <strong>Note:</strong> This is a private repository. Source code not available publicly.
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={() => setShow6(false)}>
                             Close
                         </Button>
                     </Modal.Footer>
-                </Modal>
-            </Container>
+            </Modal>
+            <Modal show={show7} onHide={() => setShow7(false)} size="lg">
+                    <Modal.Header closeButton>
+                        <Modal.Title className="fw-bold">Twitch Event Plugin</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="success" className="me-2">Contract Work</Badge>
+                            <Badge bg="primary" className="me-2">Java</Badge>
+                            <Badge bg="primary">Minecraft API</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Custom Minecraft server plugin developed as contract work for a Twitch streamer.
+                            Implemented a timed event system that manages player game modes based on timer
+                            expiration and player status.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>6-hour timer system with command interface</li>
+                            <li>Automatic game mode switching (Survival to Spectator)</li>
+                            <li>Player state management and persistence</li>
+                            <li>Event tracking and logging</li>
+                            <li>Collaborative development with team oversight</li>
+                        </ul>
+                        <h5 className="fw-bold mb-3">Professional Experience</h5>
+                        <p>
+                            Delivered as part of a team under management direction, demonstrating ability
+                            to work in collaborative environments and meet client specifications.
+                        </p>
+                        <div className="alert alert-info mt-3">
+                            <strong>Note:</strong> This is proprietary code developed for a client. Source not publicly available.
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShow7(false)}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+            </Modal>
+            <Modal show={show8} onHide={() => setShow8(false)} size="lg">
+                    <Modal.Header closeButton>
+                        <Modal.Title className="fw-bold">Viewer Forge</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="mb-3">
+                            <Badge bg="warning" text="dark" className="me-2">In Development</Badge>
+                            <Badge bg="primary" className="me-2">Python</Badge>
+                            <Badge bg="primary" className="me-2">Django</Badge>
+                            <Badge bg="primary" className="me-2">Twitch API</Badge>
+                            <Badge bg="primary">SQLite</Badge>
+                        </div>
+                        <h5 className="fw-bold mb-3">Project Overview</h5>
+                        <p>
+                            Comprehensive Twitch integration platform enabling viewers to convert channel points
+                            into coins for stream interaction. Expanding to a full SaaS solution with web interface
+                            for streamers to customize and deploy their own interactive experiences.
+                        </p>
+                        <h5 className="fw-bold mb-3">Key Features</h5>
+                        <ul>
+                            <li>Twitch API integration for channel points</li>
+                            <li>Custom currency system with conversion mechanics</li>
+                            <li>Interactive command system for stream engagement</li>
+                            <li>Django-powered web dashboard</li>
+                            <li>SQLite database for efficient data management</li>
+                            <li>Multi-streamer support (planned)</li>
+                            <li>Customizable interaction options</li>
+                        </ul>
+                        <h5 className="fw-bold mb-3">Future Roadmap</h5>
+                        <p>
+                            Expanding to support multiple streamers with a self-service platform allowing
+                            customization and configuration through an intuitive web interface.
+                        </p>
+                        <div className="alert alert-warning mt-3">
+                            <strong>Status:</strong> Active development. New features being added regularly.
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShow8(false)}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+            </Modal>
         </Container>
     );
 };

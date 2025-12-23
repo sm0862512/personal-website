@@ -5,55 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-nav ul {
-  list-style-type: none;
-  padding: 0;
 
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
 }
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-nav ul li a {
+
+/* Link styles */
+a {
   text-decoration: none;
-  cursor: default;
-  color: black;
-  font-weight: bold;
-}
-nav ul li a:hover {
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.navbar {
-  border-bottom: 2px solid #000; /* Change the color and thickness as needed */
+  transition: color 0.3s ease;
 }
 
-.loginfourm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+/* Custom selection color */
+::selection {
+  background-color: #0d6efd;
+  color: white;
 }
-.loginpage{
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
-   /*align-items: center;*/
 
+::-moz-selection {
+  background-color: #0d6efd;
+  color: white;
 }
-.container-shift-up {
-  margin-top: -60px; /* Adjust this value as needed */
+
+/* Improve button focus visibility */
+button:focus,
+a:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
 }
-.background{
-    color: #e79f80; /* Replace with your desired color */
-    font-weight: bold;
-    border-radius: 10px;
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
