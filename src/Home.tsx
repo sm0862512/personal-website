@@ -10,10 +10,12 @@ const Home = () => {
                 <Row className="align-items-center min-vh-80">
                     <Col lg={12} className="text-center">
                         <h1 className="display-3 fw-bold mb-3">Shane Mrad</h1>
-                        <h2 className="display-6 text-muted mb-4">Software Developer</h2>
+                        <h2 className="display-6 text-muted mb-4">Software Developer & IT Professional</h2>
                         <p className="lead mb-4">
-                            Full-stack developer specializing in Python, Java, React, and Django.
-                            Passionate about building innovative solutions and turning complex problems into elegant code.
+                            Full-stack developer and IT professional with 6 years of experience in software development,
+                            hardware/software support, and infrastructure management. Specializing in Python, C++, Java,
+                            React, Flask, and Django. Passionate about building innovative solutions, managing complex IT
+                            systems, and turning technical challenges into elegant solutions.
                         </p>
                         <div className="d-flex gap-3 justify-content-center mb-5">
                             <Link to="/Projects">
@@ -31,35 +33,45 @@ const Home = () => {
                             <h3 className="h5 mb-4 text-muted">Technical Skills</h3>
                             <div className="d-flex flex-wrap gap-2 justify-content-center">
                                 <span className="badge bg-primary">Python</span>
+                                <span className="badge bg-primary">C++</span>
                                 <span className="badge bg-primary">Java</span>
-                                <span className="badge bg-primary">Swift</span>
                                 <span className="badge bg-primary">JavaScript</span>
                                 <span className="badge bg-secondary">React</span>
                                 <span className="badge bg-secondary">Django</span>
-                                <span className="badge bg-secondary">TypeScript</span>
-                                <span className="badge bg-secondary">React Bootstrap</span>
-                                <span className="badge bg-success">OpenCV</span>
-                                <span className="badge bg-success">Git</span>
+                                <span className="badge bg-secondary">Flask</span>
+                                <span className="badge bg-secondary">MySQL</span>
+                                <span className="badge bg-success">Windows/Linux</span>
+                                <span className="badge bg-success">Active Directory</span>
                                 <span className="badge bg-success">Networking</span>
                                 <span className="badge bg-success">Cybersecurity</span>
+                                <span className="badge bg-info">OpenCV</span>
+                                <span className="badge bg-info">Git</span>
+                                <span className="badge bg-info">Virtualization</span>
+                                <span className="badge bg-info">Server Administration</span>
                             </div>
                         </div>
 
                         <div className="quick-stats mt-5">
                             <Row>
-                                <Col md={4} className="mb-3">
+                                <Col md={3} className="mb-3">
+                                    <div className="stat-box">
+                                        <h4 className="display-6 fw-bold text-primary">6+</h4>
+                                        <p className="text-muted">Years Experience</p>
+                                    </div>
+                                </Col>
+                                <Col md={3} className="mb-3">
                                     <div className="stat-box">
                                         <h4 className="display-6 fw-bold text-primary">8+</h4>
                                         <p className="text-muted">Projects Completed</p>
                                     </div>
                                 </Col>
-                                <Col md={4} className="mb-3">
+                                <Col md={3} className="mb-3">
                                     <div className="stat-box">
                                         <h4 className="display-6 fw-bold text-primary">2</h4>
                                         <p className="text-muted">Associate Degrees</p>
                                     </div>
                                 </Col>
-                                <Col md={4} className="mb-3">
+                                <Col md={3} className="mb-3">
                                     <div className="stat-box">
                                         <h4 className="display-6 fw-bold text-primary">2</h4>
                                         <p className="text-muted">Google Certifications</p>

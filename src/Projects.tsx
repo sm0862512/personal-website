@@ -51,19 +51,19 @@ const Projects = () => {
         },
         {
             id: 5,
-            title: "MTG Book Backend",
-            tech: ["Django", "Python", "REST API"],
+            title: "Infinity Binder - Backend API",
+            tech: ["Flask", "Python", "MySQL", "SQLAlchemy"],
             type: "Personal Project",
-            status: "Private",
+            status: "Active Development",
             show: show5,
             setShow: setShow5
         },
         {
             id: 6,
-            title: "MTG Book Frontend",
-            tech: ["React", "JavaScript"],
+            title: "Infinity Binder - Frontend Platform",
+            tech: ["React", "JavaScript", "Chart.js"],
             type: "Personal Project",
-            status: "Private",
+            status: "Active Development",
             show: show6,
             setShow: setShow6
         },
@@ -299,30 +299,35 @@ const Projects = () => {
             </Modal>
             <Modal show={show5} onHide={() => setShow5(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title className="fw-bold">MTG Book Backend</Modal.Title>
+                        <Modal.Title className="fw-bold">Infinity Binder - Flask-Based Trading Card Management API</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div className="mb-3">
-                            <Badge bg="primary" className="me-2">Django</Badge>
+                            <Badge bg="warning" text="dark" className="me-2">Active Development</Badge>
+                            <Badge bg="primary" className="me-2">Flask</Badge>
                             <Badge bg="primary" className="me-2">Python</Badge>
-                            <Badge bg="primary">REST API</Badge>
+                            <Badge bg="primary" className="me-2">MySQL</Badge>
+                            <Badge bg="primary">SQLAlchemy</Badge>
                         </div>
                         <h5 className="fw-bold mb-3">Project Overview</h5>
                         <p>
-                            Backend API service for managing Magic: The Gathering card collections. Built with
-                            Django REST Framework, providing robust data management and API endpoints for the
-                            companion frontend application.
+                            Comprehensive REST API built with Flask for card trading and inventory management.
+                            Features enterprise-grade security with token-based authentication, rate limiting,
+                            and CAPTCHA protection for a robust and scalable backend system.
                         </p>
                         <h5 className="fw-bold mb-3">Key Features</h5>
                         <ul>
-                            <li>RESTful API architecture</li>
-                            <li>Database models for card collection management</li>
-                            <li>Authentication and authorization</li>
-                            <li>CRUD operations for collections</li>
-                            <li>API documentation and versioning</li>
+                            <li>Secure token-based authentication system</li>
+                            <li>Rate limiting with IP banning for security</li>
+                            <li>CAPTCHA protection and CORS-enabled endpoints</li>
+                            <li>AWS SES integration for email notifications</li>
+                            <li>Discord webhooks for real-time security alerts</li>
+                            <li>Scalable architecture with MySQL + SQLAlchemy ORM</li>
+                            <li>Modular blueprints for organized code structure</li>
+                            <li>Full-text search with Meilisearch for optimized card lookups</li>
                         </ul>
                         <div className="alert alert-info mt-3">
-                            <strong>Note:</strong> This is a private repository. Source code not available publicly.
+                            <strong>Status:</strong> Active development with ongoing feature additions and security enhancements.
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
@@ -333,29 +338,34 @@ const Projects = () => {
             </Modal>
             <Modal show={show6} onHide={() => setShow6(false)} size="lg">
                     <Modal.Header closeButton>
-                        <Modal.Title className="fw-bold">MTG Book Frontend</Modal.Title>
+                        <Modal.Title className="fw-bold">Infinity Binder - Trading Card Inventory & Sales Management Platform</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div className="mb-3">
+                            <Badge bg="warning" text="dark" className="me-2">Active Development</Badge>
                             <Badge bg="primary" className="me-2">React</Badge>
-                            <Badge bg="primary">JavaScript</Badge>
+                            <Badge bg="primary" className="me-2">JavaScript</Badge>
+                            <Badge bg="primary">Chart.js</Badge>
                         </div>
                         <h5 className="fw-bold mb-3">Project Overview</h5>
                         <p>
-                            Frontend application for MTG card collection management. Built with React to provide
-                            an intuitive interface for browsing, organizing, and managing Magic: The Gathering
-                            card collections with real-time updates.
+                            Full-stack web application for trading card inventory and e-commerce operations.
+                            Provides comprehensive inventory tracking, sales management, and analytics with
+                            support for multi-device POS terminals and mobile tablets.
                         </p>
                         <h5 className="fw-bold mb-3">Key Features</h5>
                         <ul>
-                            <li>Interactive React-based user interface</li>
-                            <li>Integration with Django backend API</li>
-                            <li>Card search and filtering</li>
-                            <li>Collection organization tools</li>
-                            <li>Responsive design for mobile and desktop</li>
+                            <li>Real-time inventory tracking and management</li>
+                            <li>Role-based access control for team management</li>
+                            <li>Bulk CSV/Excel import functionality</li>
+                            <li>Responsive storefront with shopping cart</li>
+                            <li>Complete order management and payment workflows</li>
+                            <li>Analytics dashboards with Chart.js for sales and order history</li>
+                            <li>Multi-device management for POS terminals and mobile tablets</li>
+                            <li>Integration with Flask backend API</li>
                         </ul>
                         <div className="alert alert-info mt-3">
-                            <strong>Note:</strong> This is a private repository. Source code not available publicly.
+                            <strong>Status:</strong> Active development with ongoing enhancements to e-commerce and analytics features.
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
